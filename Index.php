@@ -16,7 +16,7 @@ $app->get('/items', function (Request $request, Response $response, $args) use (
     return $response->withHeader('Content-Type', 'application/json');
 });
 
-// Route to get a specific item
+// Route to get a particular item
 $app->get('/items/{id}', function (Request $request, Response $response, $args) use ($items) {
     $id = $args['id'];
     if (isset($items[$id])) {
